@@ -3,13 +3,14 @@ inherit_from: .rubocop_todo.yml
 # If you see any problems here, please open a PR
 
 AllCops:
+  NewCops: disable
   DisplayCopNames: true
   DisplayStyleGuide: true
   ExtraDetails: true
   EnabledByDefault: false
   UseCache: true
   CacheRootDirectory: ~
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 2.5
   Exclude:
     - 'a/*'
     - 'bin/*'
@@ -69,7 +70,7 @@ Style/Documentation:
 Style/GuardClause:
   Enabled: false
 
-Style/MethodMissingSuper:
+Lint/MissingSuper:
   Exclude:
     - 'lib/ftpmock/proxies/method_missing_mixin.rb'
 Style/MissingRespondToMissing:
@@ -109,3 +110,6 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Exclude:
     - 'lib/ftpmock/proxies/*_proxy.rb'
+
+Metrics/PerceivedComplexity:
+  Max: 10

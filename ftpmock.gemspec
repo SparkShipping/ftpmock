@@ -29,12 +29,14 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
-
+  spec.required_ruby_version = '>= 2.5'
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'net-sftp'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rubocop', '~> 1.13.0'
   spec.add_development_dependency 'simplecov'
 
   spec.add_dependency 'diffy', '~> 3.0'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

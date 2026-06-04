@@ -30,6 +30,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!--  -->
 
+## [0.1.2] - 2020-08-11
+
+### Added
+- required_ruby_version to gemspec (2.5 and up)
+- Rubocop to gemspec
+
+### Changed
+- Update some dependencies
+
+### Removed
+- Removed Rubocop dependency from Gemfile
+
 
 ## [0.1.1] - 2020-08-11
 ### Added
